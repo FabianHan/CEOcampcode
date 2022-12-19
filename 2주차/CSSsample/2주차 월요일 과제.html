@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2주차 2번째 수업</title>
+
+    <style>
+      li { display: inline; }
+      img{
+        opacity : 0.4;
+        filter : alpha(opacity=40);
+      }
+      img:hover{
+        opacity : 1.0;
+        filter : alpha(opacity=100);
+      }
+      div.relative{
+        border : 2px solid blue;
+        width : 500px;
+        height : 200px;
+        position : relative;
+      }
+      div.absolute{
+        border : 2px solid red;
+        width : 200px;
+        height : 50px;
+        position : absolute;
+        top : 20px;
+        right : 10px;
+      }
+      div.fixed{
+        border : 2px solid green;
+        width : 300px;
+        height : 150px;
+        position : fixed;
+        top : 250px;
+        right : 200px;
+      }
+      div.left{
+        background-color : yellow;
+        width : 150px;
+        height : 50px;
+        float : left;
+      }
+      div.right{
+        background-color : navy;
+        width : 150px;
+        height : 50px;
+        float : right;
+      }
+      div.clear{
+        clear : both;
+      }
+      div.page{
+        border : 3px solid red;
+        overflow : auto;
+      }
+      h2 {text-align : center; }
+      heder { border : 3px solid yellow; }
+      nav{
+        border : 3px solid green;
+        width : 150px;
+        float : left;
+      }
+      section{
+        border : 3px solid blue;
+        margin-left : 156px;
+      }
+      footer{ border : 3px solid black; }
+    </style>
+
+
+  </head>
+
+  <body>
+    <div id="one" style="background-color : blue;">안녕하세요</div>
+    <ul>
+      <li><a href="http://naver.com">네이버</a></li>
+      <li><a href="http://google.com">구글</a></li>
+    </ul>
+    <h1>이미지 투명화</h1>
+    <img src="https://vo.la/E7otZo" width="350" height="250" alt="ATOM">
+    <p>opacity 속성값을 조절하면 간단히 이미지를 투명하게 만들 수 있어요!</p>
+    <br><br>
+    <h1>절대 위치(absolute position) 지정 방식</h1>
+    <div class="relative">이 요소는 상대 위치 지정 방식으로 위치를 설정
+      <div class="absolute">relative 안에 있는 absolute</div>
+    </div>
+    <div class="absolute">그냥 absolute</div>
+    <div class="fixed">fixed 포지션 해봅시다. 이건 자유로움</div>
+    <br><br>
+    <h1>clear 속성을 이용한 위치 조정</h1>
+    <div>
+      <div class="left">왼쪽 끝에 위치</div>
+      <div class="right">오른쪽 끝에 위치</div>
+      <div class="clear">이것은 어디에 위치하나!?가운데로 하기에는 clear를 쓰기</div>
+    </div>
+    <br><br>
+    <h1>float 속성을 이용한 레이아웃</h1>
+    <div class="page">
+
+      <header>
+        <h2>header 영역</h2>
+      </header>
+      <nav>
+        <h2>nav 영역</h2>
+        <p>여기에는 보통 메뉴가 들어갑니다.</p>
+      </nav>
+      <section>
+        <h2>section 영역</h2>
+        <p>여기에는 페이지에 해당하는 내용이 들어감. asdfefasdfe</p>
+      </section>
+      <footer>
+        <h2>footer 영역</h2>
+      </footer>
+    </div>
+  </body>
+</html>

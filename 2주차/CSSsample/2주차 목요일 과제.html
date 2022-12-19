@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(()=>{
+        $("p").on("click", function(){
+          $(".jq").css("background", "lightgray");
+        });
+      });
+
+      $(document).ready(()=>{
+        $("button").on("click", function(){
+          let word = $("#new").html();
+          $("#text").html(word);
+        });
+      });
+
+      $(document).ready(()=>{
+        $("button").on("click", function(){
+          $("#item").append("<li>새로운 아이템</li>");
+        });
+      });
+
+      $(document).ready(()=>{
+        $("#btn").on("click", function(){
+          $("#ite").prepend("<li>앞에서 추가됩니다.</li>");
+        });
+      });
+
+      $(document).ready(()=>{
+        $("#fadeinBtn").on("click", function(){
+          $("#square").fadeIn("slow");
+        });
+        $("#fadeoutBtn").on("click", function(){
+          $("#square").fadeOut(2000);
+        });
+      });
+
+
+    </script>
+    <style>
+      div{
+        border : 10px solid black;
+        background-color : blue;
+        width : 100px;
+        height : 100px;
+        margin-top : 10px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>클래스 선택자</h1>
+    <p class="jq">제이쿼리를 공부하자.</p>
+    <p class="jq">하나하나 공부해보자.</p>
+    <p>마우스로 글씨를 클릭해보세요.</p>
+    <br><br><br>
+
+    <h1 id="new">.html() 메소드</h1>
+    <p>아래의 버튼을 누르면 다음 단락에 새로운 텍스트를 설정할 수 있어요!</p>
+    <button>새로운 텍스트!</button>
+    <p id="text"></p>
+    <br><br><br>
+
+    <h1>.append() 메소드</h1>
+    <ul id="item">
+      <li>첫 번째 아이템</li>
+      <li>두 번째 아이템</li>
+      <li>세 번째 아이템</li>
+    </ul>
+    <button>아이템 추가</button>
+    <br><br><br>
+
+    <h1>.prepend() 메소드</h1>
+    <ul id="ite">
+      <li>첫 번째 입니다.</li>
+      <li>두 번째 입니다.</li>
+      <li>세 번째 입니다.</li>
+    </ul>
+    <button id="btn">아이템 추가</button>
+    <br><br><br>
+
+    <h1>페이드 효과의 속도 조절</h1>
+    <button id="fadeinBtn">페이드 인</button>
+    <button id="fadeoutBtn">페이드 아웃</button>
+    <div id="square"></div>
+
+
+
+  </body>
+</html>
